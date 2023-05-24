@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Proyecto lmsgi</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+			body{
+				background-color:red;
+				background-image: url("bg.jpg");
+				background-size:cover;
+			}
+			
+			div{
+				display:flex;
+				flex-wrap:wrap;
+				width:100%;
+			}
+			
+			div aside{
+				margin:0px 10px;
+				background:#385799;
+				width:15%;
+			}
+			
+			div aside p{
+				border:2px dashed #143974;
+				margin:10px;
+				padding:15px;
+				color:#fff;
+				font-variant:small-caps;
+			}
+			
+			aside p:hover{
+				border:2px dashed #741414;
+				background:#BD2B2B;
+			}
+		
+			header,main{
+				width:60%;
+				margin:auto;
+				margin-top:20px;
+			}
+			
+			header h1{
+				font-variant:small-caps;
+				text-align:center;
+				color:#fff;
+				border:10px solid #143974;
+				width:50%;
+				height:150px;
+				margin:auto;
+				background:url("personajes.gif");
+				background-size:cover;
+			}
+			
+			header h1:hover{
+				background-size:25%;
+			}
+			
+			header nav{
+				width:100%;
+				background:#385799;
+				margin:0px auto;
+			}
+			
+			header nav ul{
+				list-style:none;
+				border:2px solid #143974;
+				display:flex;
+				flex-wrap:wrap;
+			}
+			
+			header nav ul li{
+				border-left:2px solid #143974;
+				width:25%; //para que ocupe cada a un cuarto del bloque
+			}
+			
+			header nav ul li a{
+				text-decoration:none;
+				font-variant:small-caps;
+				color:#fff;
+				display:inline-block;
+				padding:8px 15px;
+				width:100%;
+				text-align:center;
+			}
+			
+			header nav ul li a:hover{
+				background:#143974;
+			}
+			
+			div main nav ol{
+				display:flex;
+				list-style:upper-roman inside;
+			}
+			
+			div main nav ol li{
+				padding:10px;
+				background:#385799;
+				border:4px double #143974;
+			}
+			
+			div main nav ol li:nth-child(odd){
+				background:#BD2B2B;
+				border:4px double #741414;
+			}
+			
+			div main nav ol li:last-child{
+				border-top-right-radius:20px;
+			}
+			
+			div main nav ol li a{
+				text-decoration:none;
+				color:white;
+				display:inline-block;
+				font-variant:small-caps;
+			}
+			
+			div main section{
+				width:90%;
+				height:400px;
+				overflow:hidden;
+			}
+
+			div main section article img{
+				width:30%;
+				padding:5px;
+				border:4px double #143974;
+			}
+			
+			div main section article:nth-child(odd) img{
+				border:4px double #741414;
+			}
+			
+			div main section article{
+				width:100%;
+				height:100%;
+				background:#385799;
+				padding:20px;
+				border:4px double #143974;
+			}
+			
+			div main section article p{
+				color:#fff;
+				margin:10px;
+				border:2px dashed #143974;
+				padding:5px;
+				float:left;
+				width:60%;
+			}
+			
+			div main section article:nth-child(odd) p{
+				border:2px dashed #741414;
+				float:right;
+			}
+			
+			div main section article:nth-child(odd){
+				border:4px double #741414;
+				background:#BD2B2B;
+			}
+
+			
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<h1>Personajes <br/>y <br/>descripción</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="personajes.html">Presonajes</a></li>
+					<li><a href="historia.html">Historia</a></li>
+					<li><a href="minijuego.html">Minijuego</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div>
+			<aside>
+				<p>"Villains are those who never consider loosing as a possibility."</p>
+				<p>"People has their own right to choose their path to destruction."</p>
+				<p>"Don't worry, the worst that could happen is we all die."</p>
+				<p>"Accepting the truth is difficult. But it is also necessary."</p>
+				<p>"The greater the loss, the more people need someone to hate for."</p>
+			</aside>
+			<main>
+				<nav>
+					<ol>
+						<li><a href="#mat">Matthew</a></li>
+						<li><a href="#a">A</a></li>
+						<li><a href="#gl">Glimmer</a></li>
+						<li><a href="#nik">Nikol</a></li>
+						<li><a href="#sh">Shulk</a></li>
+						<li><a href="#rx">Rex</a></li>
+					</ol>
+				</nav>
+				
+				<section>
+					<article id="mat">
+						<img src="mat.jpg" alt="personaje1"/>
+						<p>Joven originario de la Ciudad, lucha contra Moebius usando sus puños con poder especial. Es honesto y de personalidad honesta y servicial.</p>
+						<p>Lucha con la clase "Artista Marcial" y su arma preferida es el Nudillo de Ouroboros.</p>
+						<p>Sus nudillos se los dio su abuelo, Ghondor. Tiene función especial de Piedra Ouroboros.</p>
+						
+					</article>
+					<article id="a">
+						<img src="a.jpg" alt="personaje2"/>
+						<p>Empuña una fina espada roja y viaja junto a Matthew. Es calmada y calculadora en sus decisiones.</p>
+						<p>Su clase es "Espadachín Monado" con Monado, aunque cura, lucha también de forma ofensiva.</p>
+						<p>La realidad es que es la conciencia perdida de Alvis, que ahora trata de detener a su cuerpo..</p>
+						
+					</article>
+					<article id="gl">
+						<img src="gli.jpg" alt="personaje3"/>
+						<p>Una soldado agnesa que lucha con bastón, de personalidad con mente fuerte y a veces un poco dura.</p>
+						<p>Su clase es Músico Resplandeciente, empuña el bastón Llama Celestial Brillante.</p>
+						<p>Es la hija de Rex, que vuelve a reencontrarse con cu padre tras perderse durante el inicio de la historia.</p>
+						
+					</article>
+					<article id="nik">
+						<img src="nik.jpeg" alt="personaje4"/>
+						<p>Soldado Kevesi experto en ingeniería mecánica, tranquilo y tímido por naturaleza.</p>
+						<p>Su clase es Maquinista y porta la Mochila Variable. Es defensor y puede activar numerosos efectos al bloquear.</p>
+						<p>En lugar de usar un blade, lucha con un par de brazos mecánicos fabricados por él mismo. Es el hijo de Shulk</p>
+						
+					</article>
+					<article id="sh">
+						<img src="sh.jpg" alt="personaje5"/>
+						<p>Amable espadachín que empuña una gran espada roja. Debido a batallas anteriores, su brazo derecho es protésico.</p>
+						<p>Su clase es "Gran Mariscal", posee un rol defenfivo, aunque también puede ejecutar poderosos ataques en cadena.</p>
+						<p>Se trata del protagonista del primer juego de la saga, que ahora aparece en una versión más adulta.</p>
+						
+					</article>
+					<article id="rx">
+						<img src="rex.jpg" alt="personaje6"/>
+						<p>Poderoso espadachín que blande dos grandes espadas. Es flexible y franco, junto a Shulk lidera a los Libertadores.</p>
+						<p>Su clase es "Piloto Maestro", un poderoso atacante que lucha en primera linea..</p>
+						<p>Se trata del protagonista del segundo juego de la saga, que ahora vuelve pasado mucho tiempo con un proposito desconocido.</p>
+						
+					</article>
+				</section>
+			</main>
+			<aside>
+				<p>"Villains are those who never consider loosing as a possibility."</p>
+				<p>"People has their own right to choose their path to destruction."</p>
+				<p>"Don't worry, the worst that could happen is we all die."</p>
+				<p>"Accepting the truth is difficult. But it is also necessary."</p>
+				<p>"The greater the loss, the more people need someone to hate for."</p>
+			</aside>
+		</div>
+
+	</body>
+</html>

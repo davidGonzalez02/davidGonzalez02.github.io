@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Proyecto lmsgi</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+			body{
+				background-color:red;
+				background-image: url("bg.jpg");
+				background-size:cover;
+			}
+			
+			div{
+				width:75%;
+				margin:auto;
+			}
+			
+			div header,main{
+				width:90%;
+				margin:auto;
+				margin-top:20px;
+			}
+			
+			div header h1{
+				background:url("story.gif");
+				font-variant:small-caps;
+				text-align:center;
+				color:#000;
+				border:10px solid #741414;
+				width:50%;
+				height:150px;
+				margin:auto;
+				background-size:cover;
+			}
+			
+			div header nav{
+				width:70%;
+				background:#BD2B2B;
+				margin:0px auto;
+			}
+			
+			div header nav ul{
+				list-style:none;
+				border:2px solid #741414;
+				display:flex;
+				flex-wrap:wrap;
+			}
+			
+			div header nav ul li{
+				border-left:2px solid #741414;
+				width:25%; //para que ocupe cada a un cuarto del bloque
+			}
+			
+			div header nav ul li a{
+				text-decoration:none;
+				font-variant:small-caps;
+				color:#fff;
+				display:inline-block;
+				padding:8px 15px;
+				width:100%;
+				text-align:center;
+			}
+			
+			div header nav ul li a:hover{
+				background:#741414;
+			}
+			
+			div main{
+				display:flex;
+				flex-wrap:wrap;
+			}
+			
+			div main nav,div main section{
+				background:#385799;
+			}
+			
+			div main nav{
+				width:20%;
+				border:4px solid #143974;
+				border-right:none;
+				margin:auto;
+			}
+			
+			div main nav ul{
+				list-style:url("icono-lista.png") inside;
+			}
+			
+			div main nav ul li{
+				padding:5px;
+				border-bottom:2px solid #143974;
+				transition:all 0.5s;
+			}
+			
+			div main nav ul li:hover{
+				background:#143974;
+			}
+			
+			div main nav ul li a{
+				text-decoration:none;
+				color:#fff;
+				font-variant:small-caps;
+			}
+			
+			div main section{
+				width:80%;
+				overflow-y:scroll; /*para cuando se desborde por arriba y por abajo*/
+				height:450px;
+				padding:10px;
+				border:4px solid #143974;
+			}
+						
+			div main section article{
+				width:80%;
+				float:left;
+				border:4px solid #143974;
+				margin-top:5px;
+			}
+			
+			div main section article:nth-child(even){
+				float:right;
+			
+			}
+			
+			div main section article div, div main section h2{
+				width:100%;
+			}
+			
+			div main section h2{
+				background:#143974;
+				padding:10px;
+				color:#fff;
+				font-variant.small-caps;
+			}
+			
+			div main section article div{
+				display:flex;
+				flex-wrap:wrap;
+				justify-content:space-between;
+				padding:5px 5px 5px 2px;
+				background:#385799;
+			}
+			
+			div main article input{
+				width:32px;
+				height:32px;
+				background:url("icono-lista.png");
+				border:none;
+			}
+			
+			div main article input:nth-child(2){
+				background:url("icon2.png");
+				background-size:contain;
+			}
+			
+			div main section article div img{
+				width:30%;
+				padding:5px;
+				border:2px solid #143974;
+				height:25%;
+			}
+			
+			div main section article div p{
+				width:60%;
+				color:#fff;
+			}
+			
+		</style>
+		<script src="proyecto.js"></script>
+	</head>
+	
+	<body>
+		<div>
+			<header>
+				<h1>Historia<br/> y<br/> desarrollo</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="personajes.html">Presonajes</a></li>
+						<li><a href="historia.html">Historia</a></li>
+						<li><a href="minijuego.html">Minijuego</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<main>
+				<nav>
+					<ul>
+						<li><a href="#c1">Capitulo 1</a></li>
+						<li><a href="#c2">Capitulo 2</a></li>
+						<li><a href="#c3">Capitulo 3</a></li>
+						<li><a href="#c4">Capitulo 4</a></li>
+						<li><a href="#c5">Capitulo 5</a></li>
+						<li><a href="#cf">Capitulo Final</a></li>
+						<li><a href="#ep">Epílogo</a></li>
+					</ul>
+				</nav>
+				
+				<section>
+				
+					<article>
+					<h2 id="c1">Capitulo 1</h2>
+					<div>
+						<img src="a.jpg" alt="capitulo1"/>
+						<p>La historia comienza con un flashback de Shulk, Rex y Z tratando de detener a Alvis, pero son derrotados por Alfa. De vuelta en el presente Matthew y A Están buscando a los habitantes de la ciudad, cuando se topan con una batalla y deciden intervenir, salvando la vida a dos de los soldados que luchaban. </p>
+					<div>
+					<input type="button" onclick="reproducir('music1.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+					
+					<article>
+					<h2 id="c2">Capitulo 2</h2>
+					<div>
+						<img src="capitulo2.png" alt="capitulo1"/>
+						<p>Uno de los soldados rescatados, Glimmer, escapa durante la noche y se encuentra con un grupo que se hace llamar "Los Libertadores". EL grupo decide ir a buscarla.</p>
+					<div>
+					<input type="button" onclick="reproducir('music2.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+					
+					<article>
+					<h2 id="c3">Capitulo 3</h2>
+					<div>
+						<img src="capitulo3.png" alt="capitulo1"/>
+						<p>Una vez reunido todo el grupo, deciden ir a colonia 9, donde esta la base de operaciones de los libertadores. Más tarde, Shulk y Rex les explican al resto el porque de todo lo que está ocurriendo, dando lugar a otro flashback.</p>
+					<div>
+					<input type="button" onclick="reproducir('music3.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+					
+					<article>
+					<h2 id="c4">Capitulo 4</h2>
+					<div>
+						<img src="capitulo4.png" alt="capitulo1"/>
+						<p>Todos juntos deciden partir en busca de Alfa, para tratar de detenerlo pero mientras descansaban un estrundo los despierta. Al ir a comprobar el origen de dicho ruido se encuentran con Alfa, que habia tomado el cuerpo de la hermana de Matthew y con N. </p>
+					<div>
+					<input type="button" onclick="reproducir('music1.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+					
+					<article>
+					<h2 id="c5">Capitulo 5</h2>
+					<div>
+						<img src="capitulo5.png" alt="capitulo1"/>
+						<p>Ahora que Alfa estaba debilitado ponen rumbo a Origen, para tratar de derrotarlo, pero para llegar a Origen tnedran que pasar por Ínsula, donde uno de los consules tratará de bloquear su paso.</p>
+					<div>
+					<input type="button" onclick="reproducir('music2.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+					
+					<article>
+					<h2 id="cf">Capitulo Final</h2>
+					<div>
+						<img src="capitulof.png" alt="capitulo1"/>
+						<p>Trás la batalla contra N, son transportados al núcleo de Origen, donde se encuentra una copia del mundo real, allí Na'el, les intenta convencer de porque el mundo debe avanzar hacia el futuro.</p>
+					<div>
+					<input type="button" onclick="reproducir('music3.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+					
+					<article>
+					<h2 id="ep">Epílogo</h2>
+					<div>
+						<img src="epilogo.png" alt="capitulo1"/>
+						<p>Trás la batalla final, Matthew se marcha del refugio, dejando a Na'el al cargo. Trás esto, se nos explica como los personajes se convirtieron en los fundadores de La Ciudad.</p>
+					<div>
+					<input type="button" onclick="reproducir('music1.mp3');">
+					<input type="button" onclick="pararRepro();">
+					</article>
+				</section>
+			</main>
+		</div>
+	
+	</body>
+</html>

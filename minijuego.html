@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Proyecto lmsgi</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+			body{
+				background-color:red;
+				background-image: url("bg.jpg");
+				background-size:cover;
+			}
+			
+			div{
+				width:75%;
+				margin:auto;
+			}
+			
+			div header,main,footer{
+				width:90%;
+				margin:auto;
+			}
+			
+			div header,div footer{
+				margin-top:20px;
+			}
+			
+			div header h1{
+				background:url("minijuego.gif");
+				font-variant:small-caps;
+				text-align:center;
+				color:#fff;
+				border:10px solid #143974;
+				width:50%;
+				height:150px;
+				margin:auto;
+				background-size:cover;
+			}
+			
+			div main{
+				height:400px;
+				background:#385799;
+				border:5px solid #143974;
+				text-align:center;
+			}	
+			
+			div main section article#resultado{
+				position:fixed;
+				top:20%;
+				left:20%;
+				width:20%;
+				height:400px;
+				background:#BD2B2B;
+				border:5px solid #741414;
+				display:none;
+			}
+			
+			div main section article#resultado img{
+				width:80%;
+				border:5px solid #741414;
+			}
+			
+			div main section article#resultado p{
+				width:80%;
+				border:3px dashed #741414;
+				color:#fff;
+				margin:auto;
+			}
+			
+			div main section article img{
+				padding:5px;
+				border:5px dashed #143974;
+				margin:10px auto;
+				width:30%;
+			}
+			
+			div main section article h3{
+				color:#fff;
+				width:50%;
+				font-variant:small-caps;
+				margin:auto;
+			}
+
+			div main section article input{
+				width:47%;
+				padding:10px;
+				margin:5px;
+				background:#BD2B2B;
+			}
+			
+			div main section article button{
+				padding:15px 30px;
+				background:#BD2B2B;
+				color:#fff;
+			}
+			
+			div main section article span{
+				color:#fff;
+				font-variant:small-caps;
+				float:left;
+			}
+			
+			div main section article input#turno{
+				background:#fff;
+				width:5%;
+				float:left;
+				padding:5px 0px;
+				text-align:center;
+			}
+			
+			div footer div:hover nav{
+				display:inline-block;
+			}
+			
+			div footer div{
+				width:100%;
+				margin:auto;
+				display:flex;
+				justify-content:center;				
+			}
+			
+			div footer div img{
+				height:100%; //para que no se agrande al salir el menu
+			}
+			
+			div footer nav{
+				display:none;
+			}
+
+			div footer nav p{
+				width:100%;
+				display:flex;
+			}
+			
+			div footer nav p a{
+				display:inline-block;
+				padding:8px 15px;
+				border:2px solid #143974;
+				background:#385799;
+				width:100%;
+				text-decoration:none;
+				font-variant:small-caps;
+				color:#fff;
+				transition:ease all 1s;
+				text-align:center;
+				margin-right:10px;
+			}
+			
+			div footer nav.nRojo p a{
+				border:2px solid #741414;
+				background:#BD2B2B;
+			}
+			
+			div footer nav p a:hover{
+				background:#143974;
+				border-top-left-radius:30px;
+				border-bottom-right-radius:30px;
+			}
+						
+			div footer nav.nRojo p a:hover{
+				background:#741414;
+				border-top-right-radius:30px;
+				border-bottom-left-radius:30px;
+				border-top-left-radius:0px;
+				border-bottom-right-radius:0px;
+			}
+			
+		</style>
+		<script type="text/javascript" src="proyecto.js"></script>
+	</head>
+	
+	<body onload="iniciar();">
+		<div>
+			<header>
+				<h1>¿Que<br/> personaje<br/> eres?</h1>
+			</header>
+			
+			<main>
+				<section>
+					<article id="resultado">
+						<h3 id="tituloRes">Eres: </h3>
+						<img src="a.jpg" alt="resultados" id="imagenRes"/>
+						<h3>Enhorabuena</h3>
+						<p>Prueba a ir a la sección de personajes para saber más sobre este personaje o leer el resumen de la historia en la sección historia</p>
+						<button onclick="ocultar();">Cerrar</button>
+					</article>
+					<article>
+						<img src="gli.jpg" alt="personaje_decorativo" id="imagen"/>
+						<h3 id="pregunta">Pregunta</h3>
+						<input type="button" value="hola" id="a" onclick="sumar(0);colocar();">
+						<input type="button" value="hola" id="b" onclick="sumar(1);colocar();">
+						<input type="button" value="hola" id="c" onclick="sumar(2);colocar();">
+						<input type="button" value="hola" id="d" onclick="sumar(3);colocar();">
+						<button id="fin" onclick="terminar();">Terminar</button>
+						
+						<span>Turnos</span><input type="text" readonly id="turno">
+					</article>
+				</section>
+			</main>
+			
+			<footer>
+				<div>
+					<nav>
+						<p><a href="minijuego.html">Repetir</a><a href="personajes.html">Personajes</a><a href="historia.html">Historia</a></p>
+					</nav>
+					<img src="icono-lista.png" alt="icono"/><br/>
+					<nav class="nRojo">
+						<p><a href="https://es.wikipedia.org/wiki/Xenoblade_Chronicles_3">Información</a><a href="https://vandal.elespanol.com/juegos/switch/xenoblade-chronicles-3/114422#p-83">Análisis</a><a href="https://xenoblade.fandom.com/wiki/Xenoblade_3_Original_Soundtrack">Música</a></p>
+					</nav>
+				</div>
+			</footer>
+		</div>
+	
+	</body>
+</html>

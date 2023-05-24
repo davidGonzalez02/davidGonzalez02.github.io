@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Proyecto lmsgi</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+			body{
+				background-color:red;
+				background-image: url("bg.jpg");
+				background-size:cover;
+			}
+			
+			div{
+				width:75%;
+				margin:auto;
+			}
+			
+			div header,main,footer{
+				width:90%;
+				margin:auto;
+				margin-top:20px;
+				clear:both;
+			}
+			
+			div header{
+				display:flex;
+				flex-wrap:wrap;
+			}
+			
+			
+			div header img{
+				width:50%;
+			}
+			
+			div header h1{
+				font-variant:small-caps;
+				color:#6C6E00;
+				margin:auto 30px;
+				background:#D8D8D8;
+				border:2px solid #000;
+				border-radius:20px;
+				padding:15px;
+				
+			}
+			
+			div header nav{
+				width:70%;
+				background:#BD2B2B;
+				margin:auto;
+			}
+			
+			div header nav ul{
+				list-style:none;
+				border:2px solid #741414;
+				display:flex;
+				flex-wrap:wrap;
+			}
+			
+			div header nav ul li{
+				border-left:2px solid #741414;
+				width:25%; //para que ocupe cada a un cuarto del bloque
+			}
+			
+			div header nav ul li a{
+				text-decoration:none;
+				font-variant:small-caps;
+				color:#fff;
+				display:inline-block;
+				padding:8px 15px;
+				width:100%;
+				text-align:center;
+			}
+			
+			div header nav ul li a:hover{
+				background:#741414;
+			}
+			
+			div main section article{
+				width:38%;
+				float:left;
+				margin:10px;
+				border:5px solid #741414;
+				border-radius:10px;
+				background:#BD2B2B;
+			}
+			
+			div main section article:nth-child(2){
+				float:right;
+				width:50%;
+			}
+			
+			div main section article iframe, article form table{
+				width:100%;
+			}
+			
+			div main section article > table{
+				border-collapse:collapse;
+				text-align:center;
+				margin:auto;
+			}
+			
+			div main section article > table th{
+				background:#000;
+				color:#fff;
+				border:2px solid #000;
+			}
+			
+			div main section article > table tr:nth-child(even) td:nth-child(even),div main section article > table tr:nth-child(odd) td:nth-child(odd){
+				background:#BD2B2B;
+				border:2px double #741414;
+			}
+			
+			div main section article > table tr td{
+				width:32px;
+				height:32px;
+				text-align:center;
+				background:#385799;
+				border:2px double #143974;
+			}
+			
+			div main section article > table td:hover{
+				width:48px;
+				height:48px;
+				position:absolute; //lo necesito sacar del flujo para no alterar la fila entera
+			}
+			
+			div main section article > table td img{
+				width:100%;
+			}
+			
+			div main section article form span{
+				color:#fff;
+				font-variant:small-caps;
+			}
+			
+			div main section article form input, div main section article form textarea{
+				border:2px solid #741414;
+				border-radius:10px;
+				padding:5px;
+				background:#BD2B2B;
+				color:#fff;
+				width:100%;
+			}
+			
+			div main section article form table tr td{
+				padding-right:15px;
+			}
+			
+	
+			div footer{
+				padding:15px 0px;
+			}
+			
+			div footer p{
+				text-align:center;
+				color:#fff;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			<header>
+				<img src="banner.png" alt="logo_pagina"/>
+				<h1>Resumen</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="personajes.html">Presonajes</a></li>
+						<li><a href="historia.html">Historia</a></li>
+						<li><a href="minijuego.html">Minijuego</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<main>
+				<section>
+					<article>
+						<table>
+							<tr>
+								<th>L</th>
+								<th>M</th>
+								<th>X</th>
+								<th>J</th>
+								<th>V</th>
+								<th>S</th>
+								<th>D</th>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>1</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+								<td>8</td>
+								<td>9</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>11</td>
+								<td>12</td>
+								<td>13</td>
+								<td>14</td>
+								<td>15</td>
+								<td>16</td>
+							</tr>
+							<tr>
+								<td>17</td>
+								<td>18</td>
+								<td>19</td>
+								<td>20</td>
+								<td>21</td>
+								<td>22</td>
+								<td>23</td>
+							</tr>
+							<tr>
+								<td>24</td>
+								<td><img src="favicon.ico" alt="logo_xenoblade"/></td>
+								<td>26</td>
+								<td>28</td>
+								<td>29</td>
+								<td>30</td>
+								<td></td>
+							</tr>
+						</table>
+					</article>
+					<article>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/KFlf_S5Woug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</article>
+					<article>
+						<form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+							<table>
+								<tr>
+									<td><span>Usuario </span></td>
+									<td><input type="text" placeholder="Nombre" name="nombre" autofocus required /></td>
+								</tr>
+								<tr>
+									<td><span>Contraseña </span></td>
+									<td><input type="password" name="contrasenya" required /></td>
+									<td><span>Recordar</span> <input type="checkbox" name="recordar" value="si" checked /></td>
+								</tr>
+								<tr>
+									<td><span>Comentarios </span></td>
+									<td><textarea></textarea></td>
+								</tr>
+								<tr>
+									<td><span>Género</span></td>
+									<td><span>Hombre</span> <input type="radio" value="hombre" name="genero"/></td>
+									<td><span>Mujer</span> <input type="radio" value="mujer" name="genero"/></td>
+								</tr>
+								<tr>
+									<td><input type="submit"/></td>
+									<td><input type="reset" value="Reiniciar" /></td>
+								</tr>
+							</table>
+						</form>
+					</article>
+				</section>
+			</main>
+			
+			<footer>
+				<p>Trabajo de LMSGI. Por David González</p>
+			</footer>
+		</div>
+	
+	</body>
+</html>
